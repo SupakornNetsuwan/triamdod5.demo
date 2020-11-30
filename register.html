@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register_style.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@300;400;500;600;700;800&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://kit.fontawesome.com/d78e884b86.js" crossorigin="anonymous"></script>
+    <title>Register Triamdod5</title>
+</head>
+<body>
+
+    <div class="sizelock">
+        <img src="sizelock.svg" alt="usingpc">
+        <p>เข้าด้วย Mobile หรือ Tablet นะ เคป่ะๆ</p>
+    </div>
+<wrap>
+    
+    <div class="white">
+        <p>กำลังจองบัตร</p>
+    </div>
+    <div class="loader">
+        <div class="box box0">
+          <div></div>
+        </div>
+        <div class="box box1">
+          <div></div>
+        </div>
+        <div class="box box2">
+          <div></div>
+        </div>
+        <div class="box box3">
+          <div></div>
+        </div>
+        <div class="box box4">
+          <div></div>
+        </div>
+        <div class="box box5">
+          <div></div>
+        </div>
+        <div class="box box6">
+          <div></div>
+        </div>
+        <div class="box box7">
+          <div></div>
+        </div>
+        <div class="ground">
+          <div></div>
+        </div>
+      </div>  
+
+    <div class="page">
+        <div class="left">
+            <div>
+                <h2 class="topic animate__animated animate__zoomIn">TRIAMDOD <span style="color:#388BFF">5</span></h2>
+                <p>x<br>Tattoo colour</p>
+                <p>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br>วง xxxxxxxxxxxx<br></p>
+            </div>
+
+            <p>Register</p>
+        </div>
+        <div class="right">
+            <form method="POST" id="form">
+                <div class="first-row">
+                    <div class="select">
+                        <select name="sex">
+                            <option value="เด็กชาย">เด็กชาย</option>
+                            <option value="เด็กหญิง">เด็กหญิง</option>
+                            <option value="นาย">นาย</option>
+                            <option value="นางสาว">นางสาว</option>
+                        </select>
+                    </div>
+                    <input type="text" name="name" placeholder="ชื่อ - นามสกุล (ภาษาไทย)">
+                </div>
+
+                <div class="second-row">
+                <div class="select">
+                    <select name="level">
+                        <option value="ม.1">ม.1</option>
+                        <option value="ม.2">ม.2</option>
+                        <option value="ม.3">ม.3</option>
+                        <option value="ม.4">ม.4</option>
+                        <option value="ม.5">ม.5</option>
+                        <option value="ม.6">ม.6</option>
+                    </select>
+                </div>
+
+                <div class="select">
+                    <select name="class">
+                        <option value="/1">ห้อง 1</option>
+                        <option value="/2">ห้อง 2</option>
+                        <option value="/3">ห้อง 3</option>
+                        <option value="/4">ห้อง 4</option>
+                        <option value="/5">ห้อง 5</option>
+                        <option value="/6">ห้อง 6</option>
+                        <option value="/7">ห้อง 7</option>
+                        <option value="/8">ห้อง 8</option>
+                        <option value="/9">ห้อง 9</option>
+                        <option value="/10">ห้อง 10</option>
+                        <option value="/11">ห้อง 11</option>
+                        <option value="/12">ห้อง 12</option>
+                        <option value="/13">ห้อง 13</option>
+                        <option value="/14">ห้อง 14</option>
+                    </select>
+                </div>
+
+                    <input type="text" name="number" placeholder="เลขที่">
+                </div>
+                
+                <div class="line"></div>
+
+                <div class="token">
+                    <div class="icon-token"><i class="fas fa-key"></i></div><input type="text" name="token" placeholder="Token">
+                </div>
+
+                <div class="email">
+                    <div class="icon-email"><i class="fas fa-envelope"></i></div><input type="text" name="email" placeholder="E-mail">
+                </div>
+
+                <input type="submit" name="submit" value="ยืนยัน">
+             
+                <script>
+                    const clicked = new Audio();
+                    clicked.src = "https://assets.codepen.io/567707/audio-ding.wav";
+                    
+
+                    $(document).ready(function(){
+                        $("[name='submit']").on("click",function(e){
+                            e.preventDefault();
+                            clicked.play();
+
+              Swal.fire({
+                title: 'ตรวจสอบความถูกต้องรึยัง?',
+                showDenyButton: true,
+                confirmButtonText: `ตรวจแล้ว`,
+                denyButtonText: `ยังไม่ตรวจ`,
+              }).then((result) => {
+                if (result.isDenied) {
+                 
+                } else if (result.isConfirmed) {
+                 
+
+                            $.ajax({
+                                url:"insert.php",
+                                method:"post",
+                                data:$("#form").serialize(),
+                                beforeSend:function(){
+                                    let white = $(".white")[0];
+                                    let loader = $(".loader")[0];
+                                    
+                                    $(".white").css({"display":"flex"});
+                                    $(".loader").css({"display":"block"});
+                                },
+                                success:function(data){
+                                    $(".white").css({"display":"none"});
+                                    $(".loader").css({"display":"none"});
+                                  
+                                    let dataparse = (JSON.parse(data));
+
+                                    if(dataparse.status == 0){
+
+                                        Swal.fire({
+                                          icon: 'error',
+                                          title: "ผิดพลาด",
+                                          text: dataparse.texts,
+                                          footer: '<a href="support.html" style="text-decoration:none;color:#2778c4;">ติดต่อทีมงาน?</a>'
+                                        })
+
+                                    }else if(dataparse.status == 1){
+
+                                        var isus_name = (name) => {
+                                            return name.split(" ")[0]
+                                        }
+
+                                        if(isus_name($("[name='name']").val()) == "คามิน" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/11"){
+                                            
+                                            //console.log(isus_name($("[name='name']").val()))
+
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ควยโปรด',
+                                                text: "ขอหอมแก้มที จากเอิร์ท" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ศรัณย์" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/9"){
+                                           
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ควยรัก',
+                                                text: "หน้าหี จากเอิร์ท" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "สรวิชญ์" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/9"){
+                                            
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ไอสัสแม็กกี้',
+                                                text: "หน้าหี จากเอิร์ท" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ศุภิศรา" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/9"){
+                                            
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'หวัดดี ปุ้มปั้ม',
+                                                text: "จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ภูริณัฐ" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/5"){
+                                            
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ต่อยมั้ย สัส',
+                                                text: "จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ตะวัน" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/3"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'คิดถึงต้าจัง',
+                                                text: "อยากจุ้บปาก จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "กัมปนาท" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/3"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'คิดถึงก้องด้วยนะ',
+                                                text: "อยากโดดกอดเลยอะ จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ก้องภพ" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'คิดถึงปั้ันจัง',
+                                                text: "อยากจุ้บปาก จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "เขตโสภณ" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/5"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ไอเหี้ยเขต ไอสัส',
+                                                text: "ควย",
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ธนภัทร" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'คิดถึงเช่ กับ ไดร์อยากต่อยปาก',
+                                                text: "จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ธีรัตม์" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'คิดถึงต้าจัง',
+                                                text: "อยากจุ้บปาก จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "กมลชนก" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'รักนะคะ',
+                                                text: "ล้อเล่นไอสัส 555555555 จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "ปุณยวัจจ์" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'เบื่อแล้วลูกอม อยยากอมลูกปืน',
+                                                text: "จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "เอเปค" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/7"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'ให้หมดอะ CS:GO',
+                                                text: "จากเอิร์ทสุดหล่อ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "พีรดา" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/5"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'เจ้าเกรซลงทะเบียน',
+                                                text: "อยากต่อยอะ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else if(isus_name($("[name='name']").val()) == "นับทอง" && $("[name='level']").val() == "ม.6" && $("[name='class']").val() == "/5"){
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'เจ้าบัวลงทะเบียน',
+                                                text: "นอนให้เพียงพอนะ" + " " + dataparse.texts,
+                                            })
+
+                                            console.log(isus_name($("[name='name']").val()) + " " + $("[name='class']").val())
+
+                                        }else{
+
+                                        Swal.fire({
+                                          icon: 'success',
+                                          title: 'สำเร็จ!',
+                                          text: dataparse.texts,
+                                        })
+                                        
+                                        }
+                                    }else if(dataparse.status == 3){
+
+                                        Swal.fire({
+                                          icon: 'warning',
+                                          title: 'ผิดพลาด',
+                                          text: dataparse.texts,
+                                          footer: '<a href="https://www.youtube.com" style="text-decoration:none;color:#2778c4;">ติดต่อทีมงาน?</a>'
+                                        })
+                                        
+                                    }
+                                }
+                                
+                            })
+
+                }
+              })
+                        })
+                    })
+                </script>
+
+                <script>
+                   // Swal.fire({
+                   //         title: 'ไม่เสือกสิ',
+                   //         text: 'ไม่เสือกเรื่องชาวบ้าน',
+                   //         icon: 'success',
+                   //         confirmButtonText: 'โอเค',
+                   //         timer: 2500,
+                   //         timerProgressBar: true,
+                   //         showDenyButton: true,
+                   //         denyButtonText : "ควย ไอสัส"
+                   //     }).then(function(result){
+                   //         if(result.isConfirmed){
+                   //             console.log("Yes");
+                   //         }else if(result.isDenied){
+                   //             Swal.fire({
+                   //                 title: "ควย มึงอะ ไอสัส",
+                   //                 text: 'เย็ดแม่',
+                   //                 icon: "info",
+                   //                 confirmButtonText: 'โอเค',
+                   //                 timer: 2500,
+                   //                 timerProgressBar: true
+                   //             })
+                   //         }
+                   //     })
+                </script>
+            </form>
+        </div>
+    </div>
+</wrap>
+</body>
+</html>

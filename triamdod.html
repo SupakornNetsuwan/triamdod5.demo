@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="triamdod_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@300;400;500;600;700;800&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+    <script src="https://kit.fontawesome.com/d78e884b86.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>triamdod5</title>
+</head>
+<body>
+    <div class="sizelock">
+        <img src="sizelock.svg" alt="usingpc">
+        <p>เข้าด้วย Mobile หรือ Tablet นะ เคป่ะๆ</p>
+    </div>
+    <page>
+
+    <div class="header">
+        <h2 class="animate__animated animate__fadeInDown">TRIAMDOD<span style="color:#388bff">5</span></h2>
+
+        <a href="support.html">
+            <div><i class="far fa-question-circle"></i><span style="padding:0 10px">ติดต่อ</span></div>
+        </a>
+    </div>
+    <div class="content">
+        <div class="first-row">
+            <div class="box-1 shadow">
+                <p id="intro">
+                </p>
+                <script>
+        
+                    var intro = document.getElementsByClassName("intro")[0];
+                    var typed = new Typed('#intro', {
+                        strings: ['1', "เตรียมพร้อม กับความมันสุดขั้วพบกันในวันที่ 5 กุมภาพันธ์ 2021 นี้อย่าลืมเตรียมกาย เตรียมใจให้พร้อม และ <span class='type_texts'>เตรียมโดดเรียน</span>","เตรียมพร้อม กับความมันสุดขั้วพบกันในวันที่ 5 กุมภาพันธ์ 2021 นี้อย่าลืมเตรียมกาย เตรียมใจให้พร้อม และ <span class='type_texts'>เอ้ย!</span>", "เตรียมพร้อม กับความมันสุดขั้วพบกันในวันที่ 5 กุมภาพันธ์ 2021 นี้อย่าลืมเตรียมกาย เตรียมใจให้พร้อม และ <span class='type_texts'>เตรียมโดด!</span>"],
+                        typeSpeed: 0,
+                        backSpeed: 20,
+                        smartBackspace: true, // this is a default
+                        loop: false,
+                        
+                    });
+        
+                </script>
+            </div>
+            <div class="box-2 shadow">
+                <p><i class="fas fa-stopwatch"></i><span style="padding:0 6px;">Count Down</span></p>
+                <div>
+                    <p><span class="units" id="days_left">34</span> <span class="small-time">วัน</span> <span class="units" id="hours_left">12</span> <span class="small-time">ชั่วโมง</span> <span class="units" id="minutes_left">6</span> <span class="small-time">นาที</span></p>
+                    <script>
+                        var second = 1000 * 1;
+                        var minute = second * 60;
+                        var hour = minute * 60;
+                        var day = hour * 24;
+
+                        var dodday = new Date("2021/02/5 14:00:00").getTime();
+                        var today = new Date();
+                        var times = dodday - today;
+                        /* Hours left to the days */
+                        var hours_left = Math.floor(times / hour)%24;
+                        /* days left to the day */
+                        var days_left = Math.round(times / day);
+                        /* minutes left to the day */
+                        var minutes_left = Math.floor(((times / hour)%24 - Math.floor(times / hour)%24) * 60);
+
+                        var days_display = document.getElementById("days_left");
+                        var hours_display = document.getElementById("hours_left");
+                        var minutes_display = document.getElementById("minutes_left");
+
+                        days_display.innerHTML = days_left;
+                        hours_display.innerHTML = hours_left;
+                        minutes_display.innerHTML = minutes_left;
+
+                        var countUp_days = new CountUp("days_left",0,days_left,0,5);
+                        var countUp_hours = new CountUp("hours_left",0,hours_left,0,5);
+                        var countUp_minutes = new CountUp("minutes_left",0,minutes_left,0,5);
+                        countUp_days.start();
+                        countUp_hours.start();
+                        countUp_minutes.start();
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="second-row">
+            <div class="box-3 shadow">
+                <p>วงดนตรี</p>
+                <div class="box-3-1">
+                    <ul class="con-lists">
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" ></li>
+                        <li class="bands" style="color:#388bff"></li>
+                    </ul>
+                    <script>
+                        var bands = document.getElementsByClassName("bands");
+                    </script>
+                    <script src="bands.js"></script>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="box-4-1 shadow">
+                    <p><i class="fas fa-ticket-alt"></i><span style="padding:0 10px;">Tickets sold</span></p>
+                    <div>
+                        <img src="ticket.svg" alt="tickets-sold" id="ticket" class="animate__animated">
+                        <!--<a href="https://www.freepik.com/vectors/vintage">Vintage vector created by freepik - www.freepik.com</a>-->
+                        <p><span id="tickets_sold">1240</span> <span class="tickets-count">ใบ</span></p>
+                        <script>
+
+                            var observer_ticket = new IntersectionObserver((entries,observer) => {
+                                entries.forEach(entry => {
+                                    if(entry.isIntersecting){
+                                        entry.target.classList.add("animate__backInDown")
+
+                                    }
+                                })
+                            });
+
+                            var ticket_target = document.getElementById("ticket");
+                            observer_ticket.observe(ticket_target)
+            
+
+                            $(document).ready(function(){
+
+                                var tickets_sold_count = 1240;
+
+                                $.ajax({
+                                    url:"get_numbers_tickets.php",
+                                    method:"GET",
+                                    success:function(data){
+                                        tickets_sold_count = data;
+
+                                        var observer_tickett = new IntersectionObserver((entries,observer) => {
+                                            entries.forEach(entry => {
+                                                if(entry.isIntersecting){
+                                                    var countUp_tickets = new CountUp("tickets_sold",0,tickets_sold_count,0,2);
+                                                    countUp_tickets.start()
+                                                
+                                                }
+                                            
+                                            })
+                                        });
+                                
+                                        var tickets_sold = document.getElementById("tickets_sold");
+                                        observer_tickett.observe(tickets_sold);
+                                
+                                    }
+                                })
+
+                            })
+         
+                           
+                        </script>
+                    </div>
+                </div>
+                <div class="box-4-2">
+                    <div class="box-4-2-1 shadow">
+                        <p><i class="fas fa-tag"></i><span style="padding:0 10px;">Ticket Price</span></p>
+                        <p>99฿ <span class="tickets-count ticket_remove">ต่อใบ</span></p>
+                    </div>
+                    
+                    <a href="register.html">
+                        <div class="box-4-2-2">ลงทะเบียน</div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <a href="support.html">
+        <div class="contacts">
+            <i class="far fa-question-circle"></i><span style="padding:0 10px">ติดต่อ</span>
+        </div>
+        </a>
+    </div>
+
+    </page>
+
+</body>
+</html>

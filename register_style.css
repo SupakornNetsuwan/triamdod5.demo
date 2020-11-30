@@ -1,0 +1,431 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@media only screen and (min-width:1400px){
+    wrap{
+        display:none;
+    }
+
+    .sizelock{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        height:100vh;
+        align-items:center;
+        justify-content: center;
+    }
+
+    img[alt="usingpc"]{
+        width:40%;
+    }
+
+    .sizelock p{
+        font-family: 'Kanit', sans-serif;
+        font-size: 3.5em;
+        margin:20px 0 0 0;
+        color:#6c65d9;
+    }
+
+}
+
+@media only screen and (max-width:1400px){
+
+    .sizelock{
+        display:none;
+    }
+
+    wrap{
+        width:100%;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#eef0f4;
+    }
+
+    .page{
+        width:95%;
+        height:85vh;
+        border-radius: 20px;
+        background: linear-gradient(225deg, #ffffff, #d6d8dc);
+        box-shadow:  -20px 20px 60px #cacccf, 
+                      20px -20px 60px #ffffff;
+        display:flex;
+        justify-content: center;
+    }
+
+    .left{
+        flex:1.6;
+        border-radius: 20px;
+        border-radius: 20px;
+        background: #eef0f4;
+        box-shadow: inset -17px 17px 33px #d1d3d7, 
+                    inset 17px -17px 33px #ffffff;
+        margin:40px 20px;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .left div{
+        margin:40px 0 0 0;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        
+    }
+
+    .left div h2{
+        font-size:4.5vw;
+        color:#212130;
+    }
+
+    .left div p:nth-child(2){
+        font-size:2vw;
+        color:#212130;
+    }
+
+    .left div p:nth-child(3){
+        font-size:1.5vw;
+        color:#2121309d;
+        margin-top:10px;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .left > p{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2vw;
+        margin:0 0 -20px 0;
+        color:#388BFF;
+        font-family: 'Parisienne', cursive;
+        font-size: 18vw;
+    }
+
+
+    .right{
+        flex:2;
+        padding:10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    form{
+        width:80%;
+        margin-top:40px;
+    }
+
+    .first-row{
+        width:100%;
+        height:20px;
+        display:flex;
+        align-items: center;
+        
+    }
+
+    .second-row{
+        width:100%;
+        height:20px;
+        margin:4vw 0 0 0;
+        display:flex;
+        align-items: center;
+        
+    }
+
+    .select{
+        display: block;
+        position: relative;
+        margin:0 10px 0 0;
+        outline:none;
+        border-radius:10px;
+        background: #eef0f4;
+        box-shadow:  -5px 5px 7px #babbbe, 
+        5px -5px 7px #ffffff;
+    }
+
+    select{
+        background:none;
+        outline: 0;
+        appearance: none;
+        width:auto;
+        height:4vw;
+        padding:0 3vw 0 1vw;
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.6vw;
+        border:none;
+        color:#2121309d;
+    }
+
+    .select::after{
+        content:"\25BC";
+        display:block;
+        position: absolute;
+        top:50%;
+        right:10px;
+        transform: translate(0,-50%);
+        pointer-events: none;
+        -webkit-transition: .25s all ease;
+        -o-transition: .25s all ease;
+        transition: .25s all ease;
+        font-size: 1.2vw;
+        color:#2121309d;
+        
+    }
+
+    input[type="text"]{
+        height:3.9vw;
+        width:100%;
+        padding:0 0 0 10px;
+        font-size: 1.6vw;
+        font-family: 'Kanit', sans-serif;
+        border-radius: 5px;
+        border-width: 1px;
+        border:1px solid #2121309d;
+        outline:none;
+        background: #eef0f4;
+        box-shadow: inset -5px 5px 12px #c1c2c6, 
+            inset 5px -5px 12px #ffffff;
+            border:none;
+        -webkit-appearance: none;
+
+    }
+
+    .line{
+        width:100%;
+        height:1px;
+        background-color:#2121309d;
+        margin-top:20vw;
+    }
+
+    .icon-token , .icon-email{
+        width:55px;
+        height:auto;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#eef0f4;
+        margin-right:8px;
+        border-radius: 20%;
+        box-shadow:  -5px 5px 7px #babbbe, 
+             5px -5px 7px #ffffff;
+        color:#2121309d;
+    }
+
+
+    .token , .email{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        margin:10px 0 0 0;
+        
+    }
+
+    input[name="token"] , input[name="email"]{
+        width:calc(100% - 10px);
+        padding:0 0 0 10px;
+        border:none;
+        background: #eef0f4;
+        box-shadow: inset -5px 5px 12px #c1c2c6, 
+            inset 5px -5px 12px #ffffff;
+    
+    }
+  
+    input[type="submit"]{
+        width:50%;
+        height:40px;
+        margin:20px 0 0 0;
+        float:right;
+        border:none;
+        outline:none;
+        border-radius: 10px;
+        background: linear-gradient(225deg, #ff9769, #e47f58);
+                    box-shadow:  -5px 5px 7px #be6a4a, 
+                    5px -5px 7px #ffe3d0;
+        font-family: 'Kanit', sans-serif;
+        font-size: 1.8vw;
+        font-weight: 400;
+        
+    }
+
+    input[type="submit"]:active{
+        background: #FD8D62;
+        box-shadow: inset 20px 20px 60px #d77853, 
+            inset -20px -20px 60px #ffa271;
+      
+    }
+
+}
+
+@media only screen and (max-width:1000px){
+    .icon-token , .icon-email{
+        width:45px;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .right{
+        align-items: flex-start;
+    }
+
+    form{
+        width:100%;
+        
+    }
+
+    select{
+        font-size: 2.5vw;
+        font-weight: 300;
+        height:auto;
+        padding:1vw 1vw;
+        
+    }
+
+    .select{
+        margin:0;
+        flex:1;
+    }
+
+    .left div p:nth-child(2){
+        font-size:3vw;
+      
+    }
+
+    .left div p:nth-child(3){
+        font-size:2vw;
+      
+    }
+    
+    .second-row .select{
+        flex:1;
+        margin:0;
+    }
+
+    .second-row .select:nth-child(1){
+        margin:0 4px 0 0;
+    }
+
+    select{
+        width:100%;
+    }
+
+    .first-row{
+        flex-wrap: wrap;
+       
+    }
+
+    .second-row{
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        margin-top:12vw;
+    }
+
+    input[name="name"] , input[name="number"]{
+        font-size: 2vw;
+        height: auto;
+        padding:8px 0 8px 8px;
+        width:100%;
+        margin:10px 0 0 0;
+    }
+
+    input[name="token"] , input[name="email"]{
+        width:calc(100% - 10px);
+        padding:8px 0 8px 8px;
+        font-size: 2vw;
+   
+    }
+    
+    .icon-token , .icon-email{
+        width:60px;
+    }
+
+    .token{
+        margin:10px 0 0 0;
+    }
+
+}
+
+@media only screen and (max-width:600px){
+    wrap{
+        height:auto;
+        min-height:100vh;
+    }
+
+    .page{
+        flex-direction: column;
+        height:auto;
+        margin:20px 0 100px 0;
+        background: linear-gradient(225deg, #ffffff, #d6d8dc);
+box-shadow:  -6px 6px 15px #9d9ea1, 
+             6px -6px 15px #ffffff;
+    }
+
+    .left{
+        margin:20px;
+        background: #eef0f4;
+        box-shadow: inset -5px 5px 7px #b7b9bc, 
+                    inset 5px -5px 7px #ffffff;
+    }
+
+    .left div h2{
+        font-size: 10vw;
+    }
+
+    .left div p:nth-child(2){
+        font-size: 6vw;
+    }   
+
+    .left div p:nth-child(3){
+        font-size: 4vw;
+    }
+
+    .left > p{
+        font-size: 40vw;
+    }
+
+    select{
+        font-size:4vw;
+        padding:10px 3vw 10px 4vw;
+    }
+
+    .select::after{
+        font-size: 3vw;
+    }
+
+    .second-row{
+        margin:160px 0 0 0;
+    }
+
+    .second-row .select:nth-child(1){
+        margin:0 22px 0 0;
+    }
+
+    input[name="name"] , input[name="number"]{
+        font-size: 4vw;
+        padding:12px 0 12px 12px;
+    }
+
+    .line{
+        margin:160px 0 0 0;
+    }
+    
+    .token{
+        margin:40px 0 0 0;
+    }
+
+    input[name="token"] , input[name="email"]{
+        font-size:4vw;
+        padding:15px 0 15px 20px;
+    }
+
+    input[type="submit"]{
+        font-size:5vw;
+        margin:20px 0 40px 0;
+    }
+
+}

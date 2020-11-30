@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@300;400;500;600;700;800&family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/d78e884b86.js" crossorigin="anonymous"></script>
+    <title>Support</title>
+</head>
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    @media only screen and (min-width:1400px){
+        page{
+            display:none;
+        }
+
+        .sizelock{
+            display:flex;
+            flex-direction: column;
+            width:100%;
+            height:100vh;
+            align-items:center;
+            justify-content: center;
+        }
+
+        img[alt="usingpc"]{
+            width:40%;
+        }
+
+        .sizelock p{
+            font-family: 'Kanit', sans-serif;
+            font-size: 3.5em;
+            margin:20px 0 0 0;
+            color:#6c65d9;
+        }
+    }
+
+    @media only screen and (max-width:1400px){
+
+        body{
+            width:100%;
+            min-height: 100vh;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        page{
+            width:100%;
+            height:auto;
+            min-height:100vh;
+        }
+
+        .sizelock{
+            display:none;
+        }
+
+        h1{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 6em;
+            color:#212130;
+            text-align: center;
+            --animate-duration: 2s;
+        }
+
+        h2{
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            color:#464646;
+            font-size: 2.5em;
+            --animate-duration: 1.5s;
+        }
+
+        .main-service{
+            width:100%;
+            height:100%;
+            padding:0 0 40px 0;
+            background-color:#212130;
+            display:flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            min-height: 60vh;
+        }
+
+        .topic{
+            flex-basis: 100%;
+            background-color:#FFFFFF;
+            height: auto;
+            max-height: 300px;
+            padding:40px 0;
+        }
+
+        img[alt="it_support"]{
+            margin:40px 0 0 0;
+            flex:1;
+        }
+
+        .links_boxs{
+            flex:1.4;
+            height:auto;
+            padding:0 20px 0 0;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        a{
+            text-decoration: none;
+            width:auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            outline: none;
+            color:#212130;
+        }
+
+        .link-1{
+        width:90%;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(253,141,98,1) 95%, rgba(189,102,69,1) 96%);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        font-size:2em;
+        font-family:'Kanit', sans-serif;
+        color:#FFFFFF;
+        padding:20px 40px;
+        box-sizing: border-box;
+        }
+
+        .link-2{
+        width:90%;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(253,141,98,1) 95%, rgba(189,102,69,1) 96%);
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        font-size:2em;
+        padding:20px 40px;
+        box-sizing: border-box;
+        font-family:'Kanit', sans-serif;
+        color:#FFFFFF;
+        margin:40px 0 0 0;
+        }
+
+    }
+
+    @media only screen and (max-width:800px){ 
+        h1{
+            font-size: 14vw;
+            margin:20px 0 0 0;
+        }
+
+        h2{
+            font-size: 6vw;
+            margin:0 0 20px 0;
+        }
+
+        .topic{
+            width:100%;
+        }
+
+        .main-service{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding:0;
+            min-height: 100vh;
+        }
+
+        img[alt="it_support"]{
+            width:60%;
+            margin:20px 0 0 0;
+        }
+
+        .links_boxs{
+            width:100%;
+            padding:0;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        a {
+            width:100%;
+            height:auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .link-1{
+            width:90%;
+            height:60px;
+            font-size:5vw;
+            padding:50px 30px;
+            font-size: 5vw;
+           
+        }
+
+        .link-2{
+            width:90%;
+            height:60px;
+            margin:20px 0 20px 0;
+            font-size:5vw;
+            padding:50px 30px;
+            font-size: 5vw;
+           
+        }
+    }
+
+    @media only screen and (max-width:500px){
+        img[alt="it_support"]{
+            width:90%;
+       
+        }
+
+
+        .link-1{
+            padding:20px 20px;
+            font-size:6vw;
+            height: auto;
+        }
+
+        .link-2{
+            padding:20px 20px;
+            font-size: 6vw;
+            height: auto;
+        }
+    }
+</style>
+<body>
+    <div class="sizelock">
+        <img src="sizelock.svg" alt="usingpc">
+        <p>เข้าด้วย Mobile หรือ Tablet นะ เคป่ะๆ</p>
+    </div>
+
+    <page>
+
+    <div class="main-service">
+        <div class="topic animate__animated animate__fadeInDown">
+            <h1 class="animate__animated animate__fadeInDown"><a href="https://triamdod5.com/">TRIAMDOD<span style="color:#388BFF;">5</span></a></h1>
+            <h2 class="animate__animated animate__fadeInDown">SUPPORT TEAM</h2>
+        </div>
+
+        <img src="it_support.svg" alt="it_support"></img>
+        <div class="links_boxs">
+
+           <a href="https://www.facebook.com/earthrockgame">
+            <div class="link-1">
+                ปัญหาการลงทะเบียน <i class="fas fa-chevron-right" style="margin:0 0 0 10px;"></i>
+            </div>
+           </a>
+
+            <a href="https://www.instagram.com/triamdodofficial/">
+            <div class="link-2">
+                คำถามทั่วไป อื่นๆ <i class="fas fa-chevron-right" style="margin:0 0 0 10px;"></i>
+            </div>
+            </a>
+
+        </div>
+    </div>
+
+    </page>
+</body>
+</html>
