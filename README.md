@@ -5,6 +5,6 @@ A Concert website project -
 
 Triamdod5 concert
 
-Fell free to check out.
+Feels free to check out.
 
 HTML CSS JAVASCRIPT PHP MYSQL + Some libraries
